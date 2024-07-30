@@ -41,7 +41,7 @@ resource "aws_subnet" "pvt-sub" {
  availability_zone = each.value["a-z"]
  cidr_block = each.value["cidr"]
  vpc_id = aws_vpc.vpc-1.id
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = false
   tags = {
     Name =  "p-${each.key}"
   }
